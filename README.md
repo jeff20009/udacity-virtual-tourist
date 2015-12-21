@@ -10,3 +10,14 @@ Create an app that downloads and stores images from Flickr. The app will allow u
 
 ## Installation
 To run the app open it on xcode and build.
+
+# Resources
+
+Udacity discussion
+
+https://teamtreehouse.com/community/how-to-get-current-location-on-viewdidload
+
+https://www.udacity.com/course/viewer#!/c-nd003/l-3071048833/m-3858348553
+
+Project Specs
+https://www.udacity.com/course/viewer#!/c-nd003/l-3071048833/m-3858348553
