@@ -13,11 +13,15 @@ To run the app open it on xcode and build.
 
 # Resources
 
-Udacity discussion
-
+##Udacity discussion
 https://teamtreehouse.com/community/how-to-get-current-location-on-viewdidload
 
 https://www.udacity.com/course/viewer#!/c-nd003/l-3071048833/m-3858348553
 
-Project Specs
+##Project Specs
 https://www.udacity.com/course/viewer#!/c-nd003/l-3071048833/m-3858348553
+
+##Sample project
+
+##Resources example
+https://www.udacity.com/course/viewer#!/c-ud325-nd/l-3648658724/m-3748298563
