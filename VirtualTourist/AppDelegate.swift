@@ -6,16 +6,29 @@
 //  Copyright (c) 2015 Jeff Chiu. All rights reserved.
 //
 
-import UIKit
 
+import UIKit
+import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var stats:Statistics! //The instance to keep the statistics
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        do {
+            // Override point for customization after application launch.
+            try fetchedResultsController.performFetch()
+        } catch _ {
+        } //Fetch the saved Statistics
+        let objects = fetchedResultsController.fetchedObjects as! [Statistics]
+        if (objects).isEmpty{//If it is the first time tha app is running, Create a Statistics entry which will keep that stats in coredata in subsequent runs
+            stats = Statistics(locations: 0, photos: 0, context: sharedContext)
+            CoreDataStackManager.sharedInstance().saveContext()
+        }else{
+          stats = objects[0] //We should have only one Instance which keeps the statistics.
+        }
+        print("Total Locations Added: \(stats.locationsAdded), Total Photos Displayed: \(stats.photosDisplayed)") //Display the Stats in the Console only.
         return true
     }
 
@@ -41,6 +54,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    var sharedContext: NSManagedObjectContext {
+        return CoreDataStackManager.sharedInstance().managedObjectContext!
+    }
+
+    
+    lazy var fetchedResultsController: NSFetchedResultsController = {
+        
+        let fetchRequest = NSFetchRequest(entityName: "Statistics")
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "locationsAdded", ascending: true)]
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+            managedObjectContext: self.sharedContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
+        return fetchedResultsController
+        
+        }()
+
 
 }
-
