@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="photos" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Photo" inverseName="location" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="photos" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Statistics" representedClassName="Statistics" syncable="YES">
+        <attribute name="locationsAdded" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="photosDisplayed" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Location" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Photo" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Statistics" positionX="-63" positionY="27" width="128" height="75"/>
+    </elements>
+</model>

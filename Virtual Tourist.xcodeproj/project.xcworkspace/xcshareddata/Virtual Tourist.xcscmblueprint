@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0837B3FC28E5489AA3BFE1C1A795C3F9293FA764",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0837B3FC28E5489AA3BFE1C1A795C3F9293FA764" : 0,
+    "955BF6039CDBC9A2D433C122CD3EA17776FEF3F9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "583B1FAC-F818-47A1-9BCB-D1C171CDCB58",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0837B3FC28E5489AA3BFE1C1A795C3F9293FA764" : "VirtualTourist-master%202\/",
+    "955BF6039CDBC9A2D433C122CD3EA17776FEF3F9" : "Virtual-Tourist"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Virtual Tourist",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Virtual Tourist.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Jeffchiucp\/udacity-virtual-tourist.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0837B3FC28E5489AA3BFE1C1A795C3F9293FA764"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/spirosrap\/Virtual-Tourist.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "955BF6039CDBC9A2D433C122CD3EA17776FEF3F9"
+    }
+  ]
+}
