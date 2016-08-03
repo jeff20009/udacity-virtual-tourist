@@ -35,5 +35,6 @@ https://www.udacity.com/course/viewer#!/c-nd003/l-3071048833/m-3858348553
 https://www.udacity.com/course/viewer#!/c-ud325-nd/l-3648658724/m-3748298563
 
 ##Known issues
-Safety Thread
-
+Core Data data useage for the users.
+Issue #7
+https://github.com/Jeffchiucp/udacity-virtual-tourist/issues
