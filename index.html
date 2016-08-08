@@ -113,7 +113,8 @@ To determine whether any of the third party services it uses honor the “Do Not
 
 <p>The Data Controller is responsible for this privacy policy, prepared starting from the modules provided by Iubenda and hosted on Iubenda's servers.</p>
 
-<p>Definitions and legal references</p>
+<h3>
+<a id="definitions-and-legal-references" class="anchor" href="#definitions-and-legal-references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Definitions and legal references</h3>
 
 <h3>
 <a id="personal-data-or-data" class="anchor" href="#personal-data-or-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Personal Data (or Data)</h3>
@@ -123,6 +124,26 @@ To determine whether any of the third party services it uses honor the “Do Not
 <p>Usage Data</p>
 
 <p>Information collected automatically from this Application (or third party services employed in this Application), which can include: the IP addresses or domain names of the computers utilized by the Users who use this Application, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilized to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server's answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilized by the User, the various time details per visit (e.g., the time spent on each page within the Application) and the details about the path followed within the Application with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User's IT environment.</p>
+
+<h3>
+<a id="flickr-data-storage" class="anchor" href="#flickr-data-storage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flickr Data Storage</h3>
+
+<p>If you don't need to back up the CoreData store, i.e., it only contains information downloaded that can be downloaded again, and doesn't contain any user content or settings, then, I would recommend you place the CoreData store in the app's cache directory instead of the documents directory. 
+Storing CoreData files in the cache directory is common practice when CoreData is being used as a cache. That's exactly what that folder is for. 
+See: lists.apple.com/archives/Cocoa-dev/2005/Jul/msg02544.html for more info. </p>
+
+<h3>
+<a id="no-back-up-to-icloud" class="anchor" href="#no-back-up-to-icloud" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>No Back-up to iCloud</h3>
+
+<p>The cache folder's contents are not backed up to iCloud.
+<a href="http://stackoverflow.com/questions/36882094/ios-app-rejection-due-to-data-storage-guidelines">http://stackoverflow.com/questions/36882094/ios-app-rejection-due-to-data-storage-guidelines</a></p>
+
+<h3>
+<a id="what-we-are-not-doing" class="anchor" href="#what-we-are-not-doing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What We are not doing</h3>
+
+<p>Because we are downloading images to Cache Directory Folder. Nothing is stored at Documents Folder.
+When placing the CoreData store in the Documents folder, it could create additional files (binary files, log files etc), and these can grow quite large. Applying the NSURLIsExcludedFromBackupKey flag on the main store.
+<a href="http://stackoverflow.com/questions/17083894/do-i-have-to-reupload-the-binary-after-an-appeal">http://stackoverflow.com/questions/17083894/do-i-have-to-reupload-the-binary-after-an-appeal</a></p>
 
 <h3>
 <a id="user" class="anchor" href="#user" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User</h3>
