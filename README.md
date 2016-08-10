@@ -1,7 +1,6 @@
-##Udacity_Project_4_VirtualTourist
+VirtualTourist
 
 ## VirtualTourist
-Project created as part of Udacity iOS Nanodegree - Project 4: Virtual Tourist App
 
 ## Project Description
 
@@ -13,7 +12,6 @@ Virtual-Tourist is an app that downloads and stores images from Flickr. The app 
 To run the app open it on xcode and build.
 
 ##Resources
-Udacity discussion
 
 https://teamtreehouse.com/community/how-to-get-current-location-on-viewdidload
 
