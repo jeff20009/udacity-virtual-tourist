@@ -56,7 +56,7 @@ class PhotoAlbumViewController: UIViewController,UICollectionViewDelegate,NSFetc
         setRegion() //Set the region on the top map based on the selected Location
         
         //"New Collection" Button and it's color
-        newCollectionButton = UIBarButtonItem(title: "New Collection", style: .Plain, target: self, action: "newCollection")
+        newCollectionButton = UIBarButtonItem(title: "New Picture", style: .Plain, target: self, action: #selector(PhotoAlbumViewController.newCollection))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
         newCollectionButton.tintColor =  UIColor(red: (255/255.0), green: (0/255.0), blue: (132/255.0), alpha: 1.0)
         self.toolbarItems = [flexSpace,newCollectionButton,flexSpace]
@@ -148,6 +148,9 @@ class PhotoAlbumViewController: UIViewController,UICollectionViewDelegate,NSFetc
     }
     
     //It is used for deleting the image from the collection view and the underlying core data context
+    
+    /// deleteObject
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath){
         let photo = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
         CoreDataStackManager.sharedInstance().deleteObject(photo)
@@ -248,12 +251,16 @@ class PhotoAlbumViewController: UIViewController,UICollectionViewDelegate,NSFetc
             if(animate){
                 indicator.startAnimating()
             }
+            print( "Testing Color TestingTestingTestingTesting")
             imageInfoView.hidden = false
             infoLabel.hidden = false
+            //infoLabel.font =
+            infoLabel.textColor = UIColor.whiteColor()
             infoLabel.text = msg
         }else{
             imageInfoView.hidden = true
             infoLabel.hidden = true
+            infoLabel.textColor = UIColor.redColor()
             indicator.stopAnimating() //It doesn't hurt to stop animation in case it didn't start before
         }
     }

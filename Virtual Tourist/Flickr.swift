@@ -11,6 +11,8 @@ import Foundation
 import CoreData
 import UIKit
 
+/// using Flickr API to set up the Session
+
 class Flickr: NSObject{
     typealias CompletionHander = (result: AnyObject!, error: NSError?) -> Void
     var session: NSURLSession
@@ -38,7 +40,7 @@ class Flickr: NSObject{
                 Flickr.MethodArguments.apiKey: Flickr.Constants.API_KEY,
                 Flickr.MethodArguments.bbox: getBbox(location),
                 Flickr.MethodArguments.safeSearch: Flickr.Constants.SAFE_SEARCH,
-                Flickr.MethodArguments.extras: Flickr.Constants.EXTRAS,
+                Flickr.MethodArguments.extras: Flickr.Constants.EXTRAS ,
                 Flickr.MethodArguments.format: Flickr.Constants.DATA_FORMAT,
                 Flickr.MethodArguments.noJsonCallBack: Flickr.Constants.NO_JSON_CALLBACK,
                 Flickr.MethodArguments.perPage:Flickr.Constants.MAXIMUM_PER_PAGE, //The maximum a bounding box query can return per page
@@ -101,6 +103,7 @@ class Flickr: NSObject{
     //It downloads the images from the already saved image paths to be in turn saved too in the CoreData
     func downloadImageAndSetCell(let imagePath:String,let cell:CollectionViewCell,completionHandler: (success: Bool, errorString: String?) -> Void){
         let imgURL = NSURL(string: imagePath)
+        print("\(imagePath)")
         let request: NSURLRequest = NSURLRequest(URL: imgURL!)
         let mainQueue = NSOperationQueue.mainQueue()
 
@@ -108,8 +111,9 @@ class Flickr: NSObject{
         if error == nil {
             // Convert the downloaded data in to a UIImage object
             let image = UIImage(data: data!)
+            let target =  self.imagePath((imagePath as NSString).lastPathComponent)
             
-            NSKeyedArchiver.archiveRootObject(image!,toFile: self.imagePath((imagePath as NSString).lastPathComponent))
+            NSKeyedArchiver.archiveRootObject(image!,toFile: target)
             
             cell.photo.image = image
             completionHandler(success: true, errorString: nil)
@@ -127,7 +131,7 @@ class Flickr: NSObject{
     //It returns the actual path in the iOS readable format
     func imagePath( selectedFilename:String) ->String{
         let manager = NSFileManager.defaultManager()
-        let url = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+        let url = manager.URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first!
         return url.URLByAppendingPathComponent(selectedFilename).path!
     }
 

@@ -15,6 +15,8 @@ import UIKit
 @objc(Photo)
 class Photo: NSManagedObject{
 
+    ///Core Data management
+    
     struct Keys {
         static let Title = "title"
         static let ImagePath = "imagePath"

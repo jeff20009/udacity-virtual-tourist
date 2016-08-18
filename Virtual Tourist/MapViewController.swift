@@ -34,7 +34,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
         self.mapView.delegate = self
         self.navigationController?.navigationBarHidden = true
         restoreMapRegion(false) //Remembers where the user scrolled in the map.
-        longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+        longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.longPressed(_:)))
         self.view.addGestureRecognizer(longPressRecognizer)
         
         do {
@@ -57,7 +57,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
         }
         
         searchBar.delegate = self
-        tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+        tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.handleSingleTap(_:)))
         tapRecognizer?.numberOfTapsRequired = 1
 
     }
@@ -137,6 +137,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
     
     
     //MARK: Creating annotations
+    /// This Drop the Pin  Point 
     //Keep an array of annotations to remove in case of user dragging the annotations before it releases his finger
     var annotationsToRemove = [MKPointAnnotation]()
     var annotation = MKPointAnnotation()
@@ -315,7 +316,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
     //Create the appropriate path to save and retrieve the map region variables
     var filePath : String {
         let manager = NSFileManager.defaultManager()
-        let url = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+        let url = manager.URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first!
         return url.URLByAppendingPathComponent("mapRegionArchive").path!
     }
 
@@ -355,8 +356,8 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
             let savedRegion = MKCoordinateRegion(center: center, span: span)
             mapView.setRegion(savedRegion, animated: animated)
         }else{
-            let span = MKCoordinateSpanMake(80, 80)
-            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.628595, longitude: 22.945351), span: span)
+            let span = MKCoordinateSpanMake(50, 50)
+            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.423039, longitude: -119.4179), span: span)
             self.mapView.setRegion(region, animated: true)
         }
     }
@@ -394,6 +395,9 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
             imageInfoView.hidden = false
             infoLabel.hidden = false
             infoLabel.text = msg
+            infoLabel.font = UIFont(name: "Arial", size: 20)
+
+            print (            infoLabel.font)
         }else{
             imageInfoView.hidden = true
             infoLabel.hidden = true

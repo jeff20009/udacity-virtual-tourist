@@ -2,8 +2,8 @@
 //  CoreDataStackManager.swift
 //  FavoriteActors
 //
-//  Created by Jason on 3/10/15.
-//  Copyright (c) 2015 Udacity. All rights reserved.
+//  Created by Jeff Chiu on 12/20/2015.
+//  Copyright (c) 2015 Jeff Chiu. All rights reserved.
 //
 
 import Foundation
@@ -16,6 +16,8 @@ import CoreData
  * like the "Earthquakes" project.
  *
  */
+
+// update the data 
 
 private let SQLITE_FILE_NAME = "VirtualTourist.sqlite"
 
@@ -40,7 +42,7 @@ class CoreDataStackManager {
     
     lazy var applicationDocumentsDirectory: NSURL = {
         
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1] 
         }()
     
@@ -109,6 +111,7 @@ class CoreDataStackManager {
     
     // MARK: - Core Data Saving support
     
+
     func saveContext () {
 
         if let context = self.managedObjectContext {
@@ -144,7 +147,29 @@ class CoreDataStackManager {
         }
     }
     
+    func addSkipBackupAttributeToItemAtURL(filePath:String) -> Bool
+    {
+        let URL:NSURL = NSURL.fileURLWithPath(filePath)
+        
+        assert(NSFileManager.defaultManager().fileExistsAtPath(filePath), "File \(filePath) does not exist")
+        
+        var success: Bool
+        do {
+            try URL.setResourceValue(true, forKey:NSURLIsExcludedFromBackupKey)
+            success = true
+        } catch let error as NSError {
+            success = false
+            print("Error excluding \(URL.lastPathComponent) from backup \(error)");
+        }
+        
+        return success
+    }
+
+    
+    
+    
     //Delete a file(an image in our case) using NSFileManager
+    
     func deleteFile(let filePath:String)  {
         let manager = NSFileManager.defaultManager()
         do{

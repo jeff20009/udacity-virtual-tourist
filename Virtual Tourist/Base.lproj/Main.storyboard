@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TZf-3W-7be">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TZf-3W-7be">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,14 +20,12 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ocz-gN-HEI">
                                 <rect key="frame" x="0.0" y="64" width="600" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="nRQ-yi-vGi"/>
                                 </constraints>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DI0-C9-ACK">
-                                <rect key="frame" x="0.0" y="152" width="605" height="448"/>
-                                <animations/>
+                                <rect key="frame" x="0.0" y="64" width="605" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fxu-iP-usG">
                                     <size key="itemSize" width="119" height="113"/>
@@ -43,20 +41,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="119" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Xk4-lC-lRa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="113"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" red="0.51372549020000002" green="0.5450980392" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4WR-qp-bwf">
                                                     <rect key="frame" x="49" y="47" width="20" height="20"/>
-                                                    <animations/>
                                                 </activityIndicatorView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Xk4-lC-lRa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="113"/>
+                                                    <color key="backgroundColor" red="0.51372549020000002" green="0.5450980392" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="Xk4-lC-lRa" firstAttribute="leading" secondItem="CeD-Co-RoQ" secondAttribute="leading" id="0pp-NP-G3b"/>
                                             <constraint firstAttribute="bottom" secondItem="Xk4-lC-lRa" secondAttribute="bottom" id="HAb-iF-5dK"/>
@@ -78,29 +72,26 @@
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-ur-A5O">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="q5f-Jd-doU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  No Network Connection :(  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHn-Qd-DS3">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-lK-P6N">
+                                <rect key="frame" x="290" y="325" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  No Network Connection :(  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHn-Qd-DS3">
                                 <rect key="frame" x="184" y="285" width="233" height="32"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-lK-P6N">
-                                <rect key="frame" x="290" y="325" width="20" height="20"/>
-                                <animations/>
-                            </activityIndicatorView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Wcm-ur-A5O" secondAttribute="centerX" id="0ig-bn-IRY"/>
                             <constraint firstAttribute="centerX" secondItem="NCh-lK-P6N" secondAttribute="centerX" id="2wZ-Ck-sMn"/>
+                            <constraint firstItem="DI0-C9-ACK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4rR-fY-QSU"/>
                             <constraint firstItem="DI0-C9-ACK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="8aj-Y4-gOS"/>
                             <constraint firstItem="DI0-C9-ACK" firstAttribute="top" secondItem="ocz-gN-HEI" secondAttribute="bottom" constant="1" id="B9y-nD-ERd"/>
                             <constraint firstAttribute="centerY" secondItem="BHn-Qd-DS3" secondAttribute="centerY" constant="-1" id="BWz-tP-P9J"/>
@@ -112,6 +103,9 @@
                             <constraint firstItem="Wcm-ur-A5O" firstAttribute="top" secondItem="ocz-gN-HEI" secondAttribute="bottom" constant="85" id="VYk-2Y-r4O"/>
                             <constraint firstItem="NCh-lK-P6N" firstAttribute="top" secondItem="BHn-Qd-DS3" secondAttribute="top" constant="40" id="cxN-0T-RMA"/>
                             <constraint firstItem="DI0-C9-ACK" firstAttribute="top" secondItem="ocz-gN-HEI" secondAttribute="top" constant="76" id="gwi-TM-2d7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DI0-C9-ACK" secondAttribute="trailing" constant="-25" id="hEK-fG-xwo"/>
+                            <constraint firstItem="DI0-C9-ACK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iae-jn-4he"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DI0-C9-ACK" secondAttribute="bottom" id="mZe-ex-Iuh"/>
                             <constraint firstItem="NCh-lK-P6N" firstAttribute="trailing" secondItem="Wcm-ur-A5O" secondAttribute="trailing" constant="-110" id="mnP-xZ-2dm"/>
                             <constraint firstItem="ocz-gN-HEI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pHw-yP-KUQ"/>
                             <constraint firstItem="ocz-gN-HEI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t45-5x-UaB"/>
@@ -119,7 +113,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4rR-fY-QSU"/>
+                                <exclude reference="B9y-nD-ERd"/>
                                 <exclude reference="gwi-TM-2d7"/>
+                                <exclude reference="hEK-fG-xwo"/>
                             </mask>
                         </variation>
                     </view>
@@ -146,7 +143,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ub-WM-Zu4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -171,11 +167,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gvf-kP-vpp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-BR-pQ5">
                                 <rect key="frame" x="180" y="210" width="240" height="180"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6DU-ix-cN2"/>
@@ -184,22 +178,18 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  No Network Connection :(  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-oI-RN6">
                                 <rect key="frame" x="184" y="284" width="233" height="32"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ujY-8Y-ep0">
                                 <rect key="frame" x="290" y="324" width="20" height="20"/>
-                                <animations/>
                             </activityIndicatorView>
-                            <searchBar contentMode="redraw" misplaced="YES" placeholder="Search for a location and click for a pin" translatesAutoresizingMaskIntoConstraints="NO" id="fyQ-Be-Wpy">
+                            <searchBar contentMode="redraw" misplaced="YES" text="" placeholder="Search for a location and hold for a pin" translatesAutoresizingMaskIntoConstraints="NO" id="fyQ-Be-Wpy">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <animations/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Mho-oI-RN6" secondAttribute="centerY" id="2xy-Eb-UUL"/>
@@ -242,7 +232,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xti-zF-ebI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

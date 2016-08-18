@@ -2,22 +2,26 @@
 //  Flickr-Constants.swift
 //  Virtual Tourist
 //  Constants Used By the App
-//  Created by Jeff Chiu on 12/20/2015.
+//  Created by Jason Chiu on 12/20/2015.
 //  Copyright (c) 2015 Jeff Chiu. All rights reserved.
 //
+
 
 
 import Foundation
 
 extension Flickr{
     
+    
     struct Constants { //Basic Constants
         // MARK: - URLs
+        // Set Up Personal API for Flickr
+        
         static let BASE_URL = "https://api.flickr.com/services/rest/"
         static let METHOD_NAME = "flickr.photos.search"
-        static let API_KEY = "237fe9755d90fb5b845fc6ab263062aa"
+        static let API_KEY = "6c338b77ebb17415042e262b90481de1"
         static let GALLERY_ID = "5704-72157622566655097"
-        static let EXTRAS = "url_m"
+        static let EXTRAS = "url_m, tags"
         static let DATA_FORMAT = "json"
         static let SAFE_SEARCH = "1"
         static let MAXIMUM_PER_PAGE = "250"
@@ -39,7 +43,7 @@ extension Flickr{
         static let page = "page"
     }
     
-    struct JsonResponse{ // Json Response tags
+    struct JsonResponse{ // JSON Response tags
         static let photo = "photo"
         static let photos = "photos"
         static let pages = "pages"

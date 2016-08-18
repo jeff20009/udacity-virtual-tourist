@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1028300E1D65079000E0FF23 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028300B1D65079000E0FF23 /* OnboardingContentViewController.m */; };
+		1028300F1D65079000E0FF23 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028300D1D65079000E0FF23 /* OnboardingViewController.m */; };
+		102830161D65183800E0FF23 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102830141D65183800E0FF23 /* OnboardingViewController.swift */; };
+		102830171D65183800E0FF23 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102830151D65183800E0FF23 /* OnboardingContentViewController.swift */; };
 		D457312A1AEAC1A4009F40F6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D45731281AEAC1A4009F40F6 /* Reachability.m */; };
 		D47F46031AE3EA0700C35294 /* Flickr-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F46021AE3EA0700C35294 /* Flickr-Constants.swift */; };
 		D47F46061AE3FA7D00C35294 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F46051AE3FA7D00C35294 /* CoreDataStackManager.swift */; };
@@ -37,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		102830091D65079000E0FF23 /* OnboardingContentViewController_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController_Private.h; sourceTree = "<group>"; };
+		1028300A1D65079000E0FF23 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
+		1028300B1D65079000E0FF23 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
+		1028300C1D65079000E0FF23 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		1028300D1D65079000E0FF23 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		102830131D65095700E0FF23 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = ../BridgingHeader.h; sourceTree = "<group>"; };
+		102830141D65183800E0FF23 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		102830151D65183800E0FF23 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		D45731251AEAC1A3009F40F6 /* Virtual Tourist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Virtual Tourist-Bridging-Header.h"; sourceTree = "<group>"; };
 		D45731271AEAC1A4009F40F6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D45731281AEAC1A4009F40F6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -80,6 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102830081D65077F00E0FF23 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				102830141D65183800E0FF23 /* OnboardingViewController.swift */,
+				102830151D65183800E0FF23 /* OnboardingContentViewController.swift */,
+				102830131D65095700E0FF23 /* BridgingHeader.h */,
+				102830091D65079000E0FF23 /* OnboardingContentViewController_Private.h */,
+				1028300A1D65079000E0FF23 /* OnboardingContentViewController.h */,
+				1028300B1D65079000E0FF23 /* OnboardingContentViewController.m */,
+				1028300C1D65079000E0FF23 /* OnboardingViewController.h */,
+				1028300D1D65079000E0FF23 /* OnboardingViewController.m */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		D45731241AEAC18C009F40F6 /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +160,7 @@
 		D4AE6F3A1AE3A1B600F4E207 /* Virtual Tourist */ = {
 			isa = PBXGroup;
 			children = (
+				102830081D65077F00E0FF23 /* Onboarding */,
 				D47F46041AE3EB5A00C35294 /* Flickr */,
 				D4891E411AECD58B007615C9 /* Model */,
 				D4F1F4EE1AEE2A9C0095F654 /* Controllers */,
@@ -232,7 +260,7 @@
 				TargetAttributes = {
 					D4AE6F371AE3A1B600F4E207 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 5D8BAGAC5C;
+						DevelopmentTeam = U9S79YC4L6;
 					};
 					D4AE6F4C1AE3A1B600F4E207 = {
 						CreatedOnToolsVersion = 6.3;
@@ -285,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4AD58A41AED336B0076678D /* Statistics.swift in Sources */,
+				1028300E1D65079000E0FF23 /* OnboardingContentViewController.m in Sources */,
 				D457312A1AEAC1A4009F40F6 /* Reachability.m in Sources */,
+				1028300F1D65079000E0FF23 /* OnboardingViewController.m in Sources */,
 				D4C9BB201AE52F4C0056D963 /* MapViewController.swift in Sources */,
 				D47F460F1AE40DB800C35294 /* CollectionViewCell.swift in Sources */,
 				D47F460B1AE3FFAF00C35294 /* Photo.swift in Sources */,
@@ -293,9 +323,11 @@
 				D4AE6F401AE3A1B600F4E207 /* PhotoAlbumViewController.swift in Sources */,
 				D49359DC1AE3E64C00F97E7F /* Flickr.swift in Sources */,
 				D47F460D1AE3FFC000C35294 /* Location.swift in Sources */,
+				102830161D65183800E0FF23 /* OnboardingViewController.swift in Sources */,
 				D47F46091AE3FC0F00C35294 /* Model.xcdatamodeld in Sources */,
 				D49359DE1AE3E6F400F97E7F /* ImageCache.swift in Sources */,
 				D4AE6F3E1AE3A1B600F4E207 /* AppDelegate.swift in Sources */,
+				102830171D65183800E0FF23 /* OnboardingContentViewController.swift in Sources */,
 				D47F46061AE3FA7D00C35294 /* CoreDataStackManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,10 +462,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "udacity.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.VirtualTourist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Virtual Tourist/Virtual Tourist-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -445,9 +478,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "udacity.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.VirtualTourist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Virtual Tourist/Virtual Tourist-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

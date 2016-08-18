@@ -2,9 +2,11 @@
 //  File.swift
 //  FavoriteActors
 //
-//  Created by Jason on 1/31/15.
-//  Copyright (c) 2015 Udacity. All rights reserved.
+//  Created by Jeff Chiu on 12/20/2015.
+//  Copyright (c) 2015 Jeff Chiu. All rights reserved.
 //
+
+/// Image cache
 
 import UIKit
 
@@ -62,7 +64,7 @@ class ImageCache {
     // MARK: - Helper
     
     func pathForIdentifier(identifier: String) -> String {
-        let documentsDirectoryURL: NSURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+        let documentsDirectoryURL: NSURL = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first!
         let fullURL = documentsDirectoryURL.URLByAppendingPathComponent(identifier)
         
         return fullURL.path!
