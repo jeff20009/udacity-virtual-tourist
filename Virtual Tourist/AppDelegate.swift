@@ -144,7 +144,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setupNormalRootVC(animated : Bool) {
         // Here I'm just creating a generic view controller to represent the root of my application.
-        let mainVC = UIViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainVC = storyboard.instantiateViewControllerWithIdentifier("NavigationMapView")
+
         mainVC.title = "Main Application"
         
         // If we want to animate it, animate the transition - in this case we're fading, but you can do it
@@ -158,6 +161,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Otherwise we just want to set the root view controller normally.
         else {
             self.window?.rootViewController = mainVC;
+            self.window!.makeKeyAndVisible()
         }
     }
 }
