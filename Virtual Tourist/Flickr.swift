@@ -43,8 +43,10 @@ class Flickr: NSObject{
                 Flickr.MethodArguments.extras: Flickr.Constants.EXTRAS ,
                 Flickr.MethodArguments.format: Flickr.Constants.DATA_FORMAT,
                 Flickr.MethodArguments.noJsonCallBack: Flickr.Constants.NO_JSON_CALLBACK,
+                Flickr.MethodArguments.tags:"",
                 Flickr.MethodArguments.perPage:Flickr.Constants.MAXIMUM_PER_PAGE, //The maximum a bounding box query can return per page
                 Flickr.MethodArguments.page:String(page)
+                
             ]
         
             Flickr.sharedInstance().taskForResource(resource, parameters: parameters){ JSONResult, error  in
