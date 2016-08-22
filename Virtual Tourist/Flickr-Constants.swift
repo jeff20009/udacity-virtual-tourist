@@ -49,6 +49,7 @@ extension Flickr{
         static let pages = "pages"
         static let title = "title"
         static let imageType = "url_m"
+        static let tags = "tags"
     }
     
 }
