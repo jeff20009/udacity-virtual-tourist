@@ -41,6 +41,8 @@ extension Flickr{
         static let noJsonCallBack = "nojsoncallback"
         static let perPage = "per_page"
         static let page = "page"
+        static let tags = "tags"
+        
     }
     
     struct JsonResponse{ // JSON Response tags
@@ -49,7 +51,6 @@ extension Flickr{
         static let pages = "pages"
         static let title = "title"
         static let imageType = "url_m"
-        static let tags = "tags"
     }
     
 }
